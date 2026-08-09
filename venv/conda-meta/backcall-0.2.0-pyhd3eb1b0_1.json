@@ -1,0 +1,133 @@
+{
+  "name": "backcall",
+  "version": "0.2.0",
+  "build": "pyhd3eb1b0_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/noarch",
+  "subdir": "noarch",
+  "fn": "backcall-0.2.0-pyhd3eb1b0_1.conda",
+  "md5": "77e722fce21d912bd4412ed73bf19678",
+  "url": "https://repo.anaconda.com/pkgs/main/noarch/backcall-0.2.0-pyhd3eb1b0_1.conda",
+  "sha256": "461b621811f25f5d2ebb2f8d01b3da9fdb59b62650d35f7a7036c82a7709d3ef",
+  "depends": [
+    "python"
+  ],
+  "constrains": [],
+  "noarch": "python",
+  "license": "BSD-3-Clause",
+  "package_type": "noarch_python",
+  "timestamp": 1761744940000,
+  "size": 15078,
+  "requested_spec": "None",
+  "package_tarball_full_path": "C:\\Users\\DELL\\anaconda3\\pkgs\\backcall-0.2.0-pyhd3eb1b0_1.conda",
+  "extracted_package_dir": "C:\\Users\\DELL\\anaconda3\\pkgs\\backcall-0.2.0-pyhd3eb1b0_1",
+  "files": [
+    "Lib/site-packages/backcall-0.2.0.dist-info/INSTALLER",
+    "Lib/site-packages/backcall-0.2.0.dist-info/METADATA",
+    "Lib/site-packages/backcall-0.2.0.dist-info/RECORD",
+    "Lib/site-packages/backcall-0.2.0.dist-info/REQUESTED",
+    "Lib/site-packages/backcall-0.2.0.dist-info/WHEEL",
+    "Lib/site-packages/backcall-0.2.0.dist-info/direct_url.json",
+    "Lib/site-packages/backcall-0.2.0.dist-info/licenses/LICENSE",
+    "Lib/site-packages/backcall/__init__.py",
+    "Lib/site-packages/backcall/_signatures.py",
+    "Lib/site-packages/backcall/backcall.py",
+    "Lib/site-packages/backcall/__pycache__/__init__.cpython-38.pyc",
+    "Lib/site-packages/backcall/__pycache__/_signatures.cpython-38.pyc",
+    "Lib/site-packages/backcall/__pycache__/backcall.cpython-38.pyc"
+  ],
+  "paths_data": {
+    "paths_version": 1,
+    "paths": [
+      {
+        "_path": "site-packages/backcall-0.2.0.dist-info/INSTALLER",
+        "path_type": "hardlink",
+        "sha256": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8",
+        "size_in_bytes": 5,
+        "sha256_in_prefix": "d0edee15f91b406f3f99726e44eb990be6e34fd0345b52b910c568e0eef6a2a8"
+      },
+      {
+        "_path": "site-packages/backcall-0.2.0.dist-info/METADATA",
+        "path_type": "hardlink",
+        "sha256": "252d0da1c8ddd0bce9af56cc8d4035dc2059230ae1116ab5196c4841b9f08822",
+        "size_in_bytes": 1971,
+        "sha256_in_prefix": "252d0da1c8ddd0bce9af56cc8d4035dc2059230ae1116ab5196c4841b9f08822"
+      },
+      {
+        "_path": "site-packages/backcall-0.2.0.dist-info/RECORD",
+        "path_type": "hardlink",
+        "sha256": "702cb96c2cefc9570d9f6ab52ced2569e7e5065dc29e1ae2239411d48a081520",
+        "size_in_bytes": 973,
+        "sha256_in_prefix": "702cb96c2cefc9570d9f6ab52ced2569e7e5065dc29e1ae2239411d48a081520"
+      },
+      {
+        "_path": "site-packages/backcall-0.2.0.dist-info/REQUESTED",
+        "path_type": "hardlink",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_in_bytes": 0,
+        "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "_path": "site-packages/backcall-0.2.0.dist-info/WHEEL",
+        "path_type": "hardlink",
+        "sha256": "0f2b7a4817da6ac584954ad44649275450190c7493c318373da4f36bb4526e46",
+        "size_in_bytes": 100,
+        "sha256_in_prefix": "0f2b7a4817da6ac584954ad44649275450190c7493c318373da4f36bb4526e46"
+      },
+      {
+        "_path": "site-packages/backcall-0.2.0.dist-info/direct_url.json",
+        "path_type": "hardlink",
+        "sha256": "6dbfa45a623f7a082469edb12d2c81cfc188a7382be64b5559d6d9373fca6a7c",
+        "size_in_bytes": 86,
+        "sha256_in_prefix": "6dbfa45a623f7a082469edb12d2c81cfc188a7382be64b5559d6d9373fca6a7c"
+      },
+      {
+        "_path": "site-packages/backcall-0.2.0.dist-info/licenses/LICENSE",
+        "path_type": "hardlink",
+        "sha256": "d422f8ce77312733c07f5fec8ccbe61d58d539774f7a66f37e4bc54740d86020",
+        "size_in_bytes": 1490,
+        "sha256_in_prefix": "d422f8ce77312733c07f5fec8ccbe61d58d539774f7a66f37e4bc54740d86020"
+      },
+      {
+        "_path": "site-packages/backcall/__init__.py",
+        "path_type": "hardlink",
+        "sha256": "bfd61414c08da701e97f2f4cfac7d50c861a7fed0c72823e012fb78fdf111b43",
+        "size_in_bytes": 213,
+        "sha256_in_prefix": "bfd61414c08da701e97f2f4cfac7d50c861a7fed0c72823e012fb78fdf111b43"
+      },
+      {
+        "_path": "site-packages/backcall/_signatures.py",
+        "path_type": "hardlink",
+        "sha256": "cb7a71fdf4c5559332f3e9b04cebd2c6538e68b51d1c9985dfb93b46ff4d5eed",
+        "size_in_bytes": 29847,
+        "sha256_in_prefix": "cb7a71fdf4c5559332f3e9b04cebd2c6538e68b51d1c9985dfb93b46ff4d5eed"
+      },
+      {
+        "_path": "site-packages/backcall/backcall.py",
+        "path_type": "hardlink",
+        "sha256": "0d0ccd5efe3b668a1af184d7e41135f51b8bc788f2ac4b105112531e1aa1738f",
+        "size_in_bytes": 3752,
+        "sha256_in_prefix": "0d0ccd5efe3b668a1af184d7e41135f51b8bc788f2ac4b105112531e1aa1738f"
+      },
+      {
+        "_path": "Lib/site-packages/backcall/__pycache__/__init__.cpython-38.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 349
+      },
+      {
+        "_path": "Lib/site-packages/backcall/__pycache__/_signatures.cpython-38.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 17678
+      },
+      {
+        "_path": "Lib/site-packages/backcall/__pycache__/backcall.cpython-38.pyc",
+        "path_type": "pyc_file",
+        "size_in_bytes": 2668
+      }
+    ]
+  },
+  "link": {
+    "source": "C:\\Users\\DELL\\anaconda3\\pkgs\\backcall-0.2.0-pyhd3eb1b0_1",
+    "type": 1
+  }
+}
