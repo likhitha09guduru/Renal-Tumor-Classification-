@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renal Tumor Classification</title>
+<link rel="shortcut icon" href="data:image/png;base64,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" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #0A0D12;
+    --panel: #10151C;
+    --panel-2: #0D1117;
+    --border: #1F2733;
+    --border-soft: #171E29;
+    --text: #E7ECF2;
+    --text-muted: #7C8AA0;
+    --accent: #35D0BA;
+    --accent-soft: rgba(53,208,186,0.12);
+    --tumor: #FF6B5E;
+    --tumor-soft: rgba(255,107,94,0.12);
+    --normal: #4ADE80;
+    --normal-soft: rgba(74,222,128,0.12);
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 15% 0%, rgba(53,208,186,0.05), transparent 45%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    min-height:100vh;
+    padding:28px 20px 60px;
+  }
+
+  a{color:var(--accent);}
+
+  .wrap{max-width:1080px;margin:0 auto;}
+
+  /* ---------- top bar ---------- */
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-bottom:20px;
+    margin-bottom:28px;
+    border-bottom:1px solid var(--border-soft);
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .brand-mark{
+    width:34px;height:34px;
+    border:1px solid var(--accent);
+    border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--mono);
+    font-size:12px;
+    font-weight:700;
+    color:var(--accent);
+    letter-spacing:0.5px;
+  }
+  .brand-text h1{
+    font-family:var(--mono);
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:0.5px;
+    margin:0;
+    color:var(--text);
+  }
+  .brand-text p{
+    margin:2px 0 0;
+    font-size:12px;
+    color:var(--text-muted);
+  }
+  .status{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.5px;
+    color:var(--text-muted);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-transform:uppercase;
+  }
+  .status .dot{
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 8px var(--accent);
+  }
+
+  /* ---------- intro line ---------- */
+  .intro{
+    max-width:640px;
+    color:var(--text-muted);
+    font-size:14.5px;
+    line-height:1.6;
+    margin-bottom:32px;
+  }
+  .intro strong{color:var(--text);font-weight:500;}
+
+  /* ---------- main grid ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  @media (max-width:820px){
+    .grid{grid-template-columns:1fr;}
+  }
+
+  .panel{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .panel-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 16px;
+    border-bottom:1px solid var(--border-soft);
+  }
+  .panel-head h2{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    margin:0;
+    font-weight:600;
+  }
+  .panel-head span{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-muted);
+  }
+
+  /* ---------- scan input panel ---------- */
+  .scan-stage{
+    position:relative;
+    margin:20px;
+    aspect-ratio:1/1;
+    background:var(--panel-2);
+    border-radius:6px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .scan-stage img{
+    width:100%;height:100%;
+    object-fit:cover;
+    display:none;
+  }
+  .scan-placeholder{
+    text-align:center;
+    color:var(--text-muted);
+    font-size:12.5px;
+    font-family:var(--mono);
+    padding:20px;
+    line-height:1.7;
+  }
+  .scan-placeholder svg{display:block;margin:0 auto 10px;opacity:0.5;}
+
+  /* corner reticle brackets — the signature element */
+  .reticle span{
+    position:absolute;
+    width:20px;height:20px;
+    border:2px solid var(--accent);
+    opacity:0.85;
+  }
+  .reticle .tl{top:10px;left:10px;border-right:none;border-bottom:none;}
+  .reticle .tr{top:10px;right:10px;border-left:none;border-bottom:none;}
+  .reticle .bl{bottom:10px;left:10px;border-right:none;border-top:none;}
+  .reticle .br{bottom:10px;right:10px;border-left:none;border-top:none;}
+
+  /* sweeping scan-line, shown only while analyzing */
+  .scan-line{
+    position:absolute;
+    left:0;right:0;top:0;
+    height:2px;
+    background:linear-gradient(90deg, transparent, var(--accent), transparent);
+    box-shadow:0 0 14px 2px var(--accent);
+    opacity:0;
+    pointer-events:none;
+  }
+  .scanning .scan-line{
+    opacity:1;
+    animation:sweep 1.6s linear infinite;
+  }
+  .scanning .scan-placeholder,
+  .scanning img{filter:brightness(0.85);}
+  @keyframes sweep{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(100%);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .scan-line{animation:none !important;}
+  }
+
+  .controls{
+    display:flex;
+    gap:10px;
+    padding:0 20px 20px;
+  }
+  button{
+    font-family:var(--mono);
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.4px;
+    text-transform:uppercase;
+    border-radius:6px;
+    padding:11px 18px;
+    cursor:pointer;
+    border:1px solid var(--border);
+    background:transparent;
+    color:var(--text);
+    flex:1;
+    transition:border-color .15s ease, background .15s ease, color .15s ease;
+  }
+  button:hover{border-color:var(--accent);color:var(--accent);}
+  button:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+  button.primary{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#04211D;
+  }
+  button.primary:hover{background:#2ab7a3;color:#04211D;}
+  button.primary:disabled{
+    opacity:0.4;
+    cursor:not-allowed;
+  }
+
+  /* ---------- results panel ---------- */
+  .results-body{
+    padding:20px;
+    min-height:340px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .result-empty{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--text-muted);
+    font-size:13px;
+    font-family:var(--mono);
+    line-height:1.7;
+    padding:20px;
+  }
+
+  .diagnosis{
+    display:none;
+    text-align:center;
+    padding:26px 16px;
+    border-radius:8px;
+    border:1px solid var(--border);
+  }
+  .diagnosis.show{display:block;}
+  .diagnosis .label{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--text-muted);
+    margin-bottom:10px;
+  }
+  .diagnosis .value{
+    font-family:var(--mono);
+    font-size:30px;
+    font-weight:700;
+    letter-spacing:1px;
+  }
+  .diagnosis.tumor{background:var(--tumor-soft);border-color:rgba(255,107,94,0.4);}
+  .diagnosis.tumor .value{color:var(--tumor);}
+  .diagnosis.normal{background:var(--normal-soft);border-color:rgba(74,222,128,0.4);}
+  .diagnosis.normal .value{color:var(--normal);}
+
+  .meta-row{
+    display:flex;
+    justify-content:space-between;
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--text-muted);
+    padding-top:2px;
+  }
+
+  .raw-json{
+    display:none;
+    background:var(--panel-2);
+    border:1px solid var(--border-soft);
+    border-radius:6px;
+    padding:12px 14px;
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--text-muted);
+    white-space:pre-wrap;
+    word-break:break-word;
+  }
+  .raw-json.show{display:block;}
+
+  .error-box{
+    display:none;
+    background:var(--tumor-soft);
+    border:1px solid rgba(255,107,94,0.4);
+    color:var(--tumor);
+    border-radius:6px;
+    padding:12px 14px;
+    font-family:var(--mono);
+    font-size:12px;
+  }
+  .error-box.show{display:block;}
+
+  /* ---------- footer ---------- */
+  footer{
+    margin-top:34px;
+    padding-top:18px;
+    border-top:1px solid var(--border-soft);
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--text-muted);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  input[type="file"]{display:none;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <div class="brand-mark">RTC</div>
+      <div class="brand-text">
+        <h1>Renal Tumor Classification</h1>
+        <p>Kidney CT scan analysis</p>
+      </div>
+    </div>
+    <div class="status"><span class="dot"></span> Model ready</div>
+  </header>
+
+  <p class="intro">
+    Upload a kidney CT scan below and the model will classify it as <strong>Normal</strong> or <strong>Tumor</strong>.
+    Predictions come from a VGG16-based convolutional network fine-tuned on labeled CT scan images — this tool
+    is for demonstration purposes and is not a substitute for clinical diagnosis.
+  </p>
+
+  <div class="grid">
+
+    <!-- INPUT PANEL -->
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Scan Input</h2>
+        <span id="fileStatus">No file selected</span>
+      </div>
+
+      <div class="scan-stage reticle" id="scanStage">
+        <span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span>
+        <div class="scan-line" id="scanLine"></div>
+        <img id="photo" alt="Uploaded CT scan preview">
+        <div class="scan-placeholder" id="placeholder">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="9" cy="9" r="2"/>
+            <path d="M21 15l-5-5-9 9"/>
+          </svg>
+          Awaiting scan upload
+        </div>
+      </div>
+
+      <div class="controls">
+        <button type="button" id="uploadBtn">Upload Scan</button>
+        <button type="button" id="predictBtn" class="primary" disabled>Run Analysis</button>
+      </div>
+      <input type="file" id="fileinput" accept="image/*">
+    </section>
+
+    <!-- OUTPUT PANEL -->
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Analysis Output</h2>
+        <span id="resultTime">—</span>
+      </div>
+
+      <div class="results-body">
+        <div class="result-empty" id="resultEmpty">
+          Upload a scan and run analysis to see<br>the classification result here.
+        </div>
+
+        <div class="diagnosis" id="diagnosisBox">
+          <div class="label">Classification result</div>
+          <div class="value" id="diagnosisValue">—</div>
+        </div>
+
+        <div class="meta-row" id="metaRow" style="display:none;">
+          <span>MODEL: VGG16 (transfer learning)</span>
+          <span>INPUT: 224×224</span>
+        </div>
+
+        <div class="error-box" id="errorBox"></div>
+
+        <pre class="raw-json" id="rawJson"></pre>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <span>Renal Tumor Classification — Kidney CT Scan Pipeline</span>
+    <span>Not for clinical use</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  const fileInput   = document.getElementById('fileinput');
+  const uploadBtn   = document.getElementById('uploadBtn');
+  const predictBtn  = document.getElementById('predictBtn');
+  const photo       = document.getElementById('photo');
+  const placeholder = document.getElementById('placeholder');
+  const scanStage   = document.getElementById('scanStage');
+  const fileStatus  = document.getElementById('fileStatus');
+  const resultEmpty = document.getElementById('resultEmpty');
+  const diagnosisBox   = document.getElementById('diagnosisBox');
+  const diagnosisValue = document.getElementById('diagnosisValue');
+  const metaRow     = document.getElementById('metaRow');
+  const errorBox    = document.getElementById('errorBox');
+  const rawJson     = document.getElementById('rawJson');
+  const resultTime  = document.getElementById('resultTime');
+
+  let base64Data = "";
+
+  uploadBtn.addEventListener('click', () => fileInput.click());
+
+  fileInput.addEventListener('change', function(){
+    const file = this.files && this.files[0];
+    if(!file) return;
+
+    fileStatus.textContent = file.name;
+
+    const reader = new FileReader();
+    reader.onload = function(e){
+      const img = new Image();
+      img.onload = function(){
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        canvas.getContext('2d').drawImage(img, 0, 0);
+        base64Data = canvas.toDataURL('image/jpeg', 1.0).replace(/^data:image.+;base64,/, '');
+        predictBtn.disabled = false;
+      };
+      img.src = e.target.result;
+      photo.src = e.target.result;
+      photo.style.display = 'block';
+      placeholder.style.display = 'none';
+    };
+    reader.readAsDataURL(file);
+
+    resetResults();
+  });
+
+  predictBtn.addEventListener('click', function(){
+    if(!base64Data) return;
+    runAnalysis(base64Data);
+  });
+
+  function resetResults(){
+    resultEmpty.style.display = 'flex';
+    diagnosisBox.classList.remove('show','tumor','normal');
+    metaRow.style.display = 'none';
+    errorBox.classList.remove('show');
+    rawJson.classList.remove('show');
+    resultTime.textContent = '—';
+  }
+
+  function runAnalysis(imgData){
+    predictBtn.disabled = true;
+    scanStage.classList.add('scanning');
+
+    fetch('../predict', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ image: imgData })
+    })
+    .then(res => res.json())
+    .then(data => {
+      scanStage.classList.remove('scanning');
+      predictBtn.disabled = false;
+
+      let label = null;
+      try{ label = data[0].image; }catch(e){}
+
+      resultEmpty.style.display = 'none';
+      rawJson.textContent = JSON.stringify(data, null, 2);
+      rawJson.classList.add('show');
+      resultTime.textContent = new Date().toLocaleTimeString();
+
+      if(label === 'Tumor' || label === 'Normal'){
+        diagnosisBox.classList.add('show', label.toLowerCase());
+        diagnosisValue.textContent = label;
+        metaRow.style.display = 'flex';
+        errorBox.classList.remove('show');
+      } else {
+        errorBox.textContent = 'Unexpected response from the model — see raw output below.';
+        errorBox.classList.add('show');
+      }
+    })
+    .catch(err => {
+      scanStage.classList.remove('scanning');
+      predictBtn.disabled = false;
+      resultEmpty.style.display = 'none';
+      errorBox.textContent = 'Request failed: ' + err.message;
+      errorBox.classList.add('show');
+    });
+  }
+})();
+</script>
+</body>
+</html>
